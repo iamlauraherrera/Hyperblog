@@ -1,0 +1,69 @@
+---------------------Console----------------------
+mkdir   //Crea carpetas
+touch   //Crea un txt
+cat     //Muestra el contenido de un archivo
+history //Muestra el historial de comandos hechos hasta 
+          ese momento
+rm      //Elimina un archivo
+pwd     //Ubicacion actual donde estas
+alias (name) ="(command)"  //Le asigno un alias a un comando muy largo
+-------------------------Code---------------------
+code    //Abre visual studio code
+--------------------------Git----------------------
+git config                      //Configurar git
+git config -l                   //Configuracion de git y lo que falta
+git config --list --show-origin //Ubicación de origen de las configuraciones de git
+git config --global             //Cambiar configuraciones globales
+git config --global user.name   //Cambiar el nombre
+git config --global user.email  //Cambiar el correo
+-----------------------------------------------------
+git init                            //Crear un repositorio diciendo donde esta la carpeta principal del proyecto
+git status                          //Ver el estado del proyecto
+git add                             //Añade un archivo a git al estado staging
+git add .                           //Añade todos los archivos a git
+git rm                              //Quitar el archivo añadido
+git rm --cached                     //Borra el archivo y lo deja en memoria RAM o staging
+git rm --force                      //Elimina los archivos de git t del disco duro
+git commit -m "Primer commit"       //Envía los cambios al repositorio con un mensaje
+git commit (ESC+SHIF+ZZ)            //Envia cambios y debe forzar el comentario con el comando escrito
+git commit -a                       //Guarda los cambios que ya les haya hecho add anteriormente
+git commit -a                       //Añade los cambios y permite poner un mensaje en el commit
+git log                             //Historial de los cambios de un archivo
+git log --all                       //Historial de todos los cambios
+git log --all --graph               //Muestra los branches hechos hasta el momento
+git log --all --decorate --oneline  //Muestra toda la historia mucho mas comprimida
+gitk                                //Muestra en interfaz toda la historia del repositorio
+git show                            //Muestra los cambios del archivo
+git tag				    //Muestra todos los tags realizados en Git
+git tag -a (version#)               //Nombra un nuevo tag en mi control de versiones
+git tag -d (nametag)                //Borra el nombre de un tag
+git push origin --tags              //Envia a GitHub los tags que hemos creado
+git push origin :refs/tags/(nametag)//Borra desde consola un tag que este en GitHub
+git show-ref --tags                 //Muestra a que commit esta relacionado el tag
+git diff                            //Muestra los cambios que se han hecho dentro del archivo
+git diff (commit)                   //Muestra las diferencias entre cambio y cambio de commit
+git reset (commit)--hard            //Se devuelve al commit escrito
+git reset (commit)--soft            //Se devuelve al commit escrito pero quedan los archivos subidos a staging
+git reset HEAD                      //Saca archivos del area de staging al estado de Unstaged
+git checkout (commit)               //Muestra como era el archivo anteriormente y lo devuelve
+git checkout master                 //Devuelve el archivo mas reciente
+git clone url                       //Trea los datos del servidor remoto sustrayendo una copia del master y la BD
+git push                            //Enviar mi repositorio local al repositorio remoto
+git fetch                           //Trae una actualizacion del repositorio remoto
+git merge                           //Copia una version del repositorio remoto a mis archivos
+git pull                            //Trae la última actualización a mi carpeta
+git branch                          //Cambia y crea ramas o branches como si fuera un puntero y me las muestra
+git show-branch                     //Muestra las ramas locales que existen y su historia
+git show-branch --all               //Muestra todas las ramas que existen y su historia 
+git remote   			    //Muestra el estado de mi repositorio remoto
+git remote -v			    //Muestra los estados que se pueden generar con GitHub
+git remote set-url origin(SSH)      //Cambia la URL de protocolo HTTPS a SSH
+git remote add origin(HTTP-SSH)     //Crea un archivo remoto en GitHub
+                                    //Clonar un repositorio
+--------------------------------------------------------------------------------------------------
+LLAVE SSH
+ssh-keygen -t rsa -b 4096 -C "l.herrera1@utp.edu.co"
+eval $(ssh-agent -s) 		    //Revisa que el servidor de llaves este encendido
+ssh-add~(ubicacion de la carpeta)   //Agregar la llave al sistema
+cat id_rsa			    //Veo el contenido de mi llave primaria
+cat id_rsa.pub			    //Veo el contenido de mi llave publica
